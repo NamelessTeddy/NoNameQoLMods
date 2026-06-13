@@ -4,5 +4,7 @@
   "Gmcm.Suppression.Name": "Default Input Suppression",
   "Gmcm.Suppression.Tooltip": "When to suppress the default behavior of the {{ keybindName }}, if it has any other in-game function.",
   "Gmcm.Suppression.Option.OnCancel": "Only when cancelling",
-  "Gmcm.Suppression.Option.Always": "Always"
+  "Gmcm.Suppression.Option.Always": "Always",
+  "Gmcm.CancelDelay.Name": "Cancel Delay (ms)",
+  "Gmcm.CancelDelay.Tooltip": "How many milliseconds to wait after starting a tool use before cancelling the animation. Lower values are faster but may cancel before the tool effect registers."
 }
