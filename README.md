@@ -1,4 +1,4 @@
-# Animation Cancel Keybinding
+# NoName's Stardew QoL Mods
 
 A SMAPI mod for Stardew Valley that adds a configurable keybind to cancel tool/weapon animations, with optional auto-use looping.
 
@@ -32,7 +32,7 @@ Originally by [Swaglix05](https://github.com/Swaglix05/AnimationCancelKey). This
 2. Clone the repo and navigate to the project folder:
    ```bash
    git clone https://github.com/NamelessTeddy/AnimationCancelKey.git
-   cd AnimationCancelKey/AnimationCancelKeybinding
+   cd AnimationCancelKey/NoNameQoLMods
    ```
 3. Build and deploy:
    ```bash
