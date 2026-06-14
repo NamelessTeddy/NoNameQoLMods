@@ -6,5 +6,7 @@
   "Gmcm.Suppression.Option.OnCancel": "Only when cancelling",
   "Gmcm.Suppression.Option.Always": "Always",
   "Gmcm.CancelDelay.Name": "Cancel Delay (ms)",
-  "Gmcm.CancelDelay.Tooltip": "How many milliseconds to wait after starting a tool use before cancelling the animation. Lower values are faster but may cancel before the tool effect registers."
+  "Gmcm.CancelDelay.Tooltip": "How many milliseconds to wait after starting a tool use before cancelling the animation. Lower values are faster but may cancel before the tool effect registers.",
+  "Gmcm.ClubSpecial.Name": "Club Special Attack",
+  "Gmcm.ClubSpecial.Tooltip": "When enabled, pressing the cancel key while holding a club triggers the club's special smash attack, then spams attacks during the special animation."
 }

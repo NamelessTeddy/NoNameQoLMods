@@ -60,6 +60,12 @@ internal sealed class ModEntry : Mod
             min: 50,
             max: 1000,
             interval: 10);
+        configMenu.AddBoolOption(
+            ModManifest,
+            name: () => I18n.Gmcm_ClubSpecial_Name(),
+            tooltip: () => I18n.Gmcm_ClubSpecial_Tooltip(),
+            getValue: () => config.EnableClubSpecial,
+            setValue: value => config.EnableClubSpecial = value);
     }
 
     private void GameLoop_UpdateTicked(object sender, UpdateTickedEventArgs e)
@@ -80,6 +86,17 @@ internal sealed class ModEntry : Mod
         if (player.CurrentTool is FishingRod)
         {
             _cancelTimerSet = false;
+            return;
+        }
+
+        // Club special attack: trigger the spinning smash and spam attacks during its animation
+        if (config.EnableClubSpecial
+            && player.CurrentTool is MeleeWeapon clubWeapon
+            && clubWeapon.type.Value == MeleeWeapon.club)
+        {
+            _cancelTimerSet = false;
+            if (!keyHeld) return;
+            HandleClubSpecial(clubWeapon, player, keybind);
             return;
         }
 
@@ -116,6 +133,24 @@ internal sealed class ModEntry : Mod
         }
     }
 
+    private void HandleClubSpecial(MeleeWeapon weapon, Farmer player, Keybind keybind)
+    {
+        if (config.Suppression == KeySuppression.Always)
+            SuppressKeybind(keybind);
+
+        if (weapon.isOnSpecial)
+        {
+            // Special animation is active — spam attacks so the next one starts immediately after
+            Game1.pressUseToolButton();
+        }
+        else if (!player.UsingTool && player.canMove && MeleeWeapon.clubCooldown <= 0)
+        {
+            // Player is free and off cooldown — trigger the club's special smash attack
+            weapon.triggerClubFunction(player);
+        }
+        // If mid-swing or on cooldown: wait for it to clear
+    }
+
     private void SuppressKeybind(Keybind keybind)
     {
         foreach (var button in keybind.Buttons)
@@ -132,4 +167,5 @@ class ModConfig
     public KeybindList CancelKey { get; set; } = KeybindList.Parse("Space");
     public KeySuppression Suppression { get; set; } = KeySuppression.OnCancel;
     public int CancelDelayMs { get; set; } = 220;
+    public bool EnableClubSpecial { get; set; } = true;
 }
