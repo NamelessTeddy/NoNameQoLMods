@@ -2,7 +2,7 @@
 
 A SMAPI mod for Stardew Valley that adds a configurable keybind to cancel tool/weapon animations, with optional auto-use looping.
 
-Originally by [Swaglix05](https://github.com/Swaglix05/AnimationCancelKey). This fork adds auto-use loop behavior and other improvements.
+Forked from AnimationCancelKeybinding by [Swaglix05](https://github.com/Swaglix05/AnimationCancelKey). This fork adds auto-use loop behavior and other improvements.
 
 ## Features
 
