@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationCancelKeybinding", "AnimationCancelKeybinding\AnimationCancelKeybinding.csproj", "{469ED232-146E-49B1-A674-17361304AFF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoNameQoLMods", "NoNameQoLMods\NoNameQoLMods.csproj", "{469ED232-146E-49B1-A674-17361304AFF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

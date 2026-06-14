@@ -5,7 +5,7 @@ using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.Tools;
 
-namespace AnimationCancelKeybinding;
+namespace NoNameQoLMods;
 
 /// <summary>The mod entry point.</summary>
 internal sealed class ModEntry : Mod
