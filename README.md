@@ -19,7 +19,7 @@ Forked from AnimationCancelKeybinding by [Swaglix05](https://github.com/Swaglix0
 | **Cancel Key** | `Space` | The key to hold/press to trigger animation cancelling (or club special) |
 | **Cancel Delay** | `220 ms` | How long to wait after a tool use starts before cancelling the animation. Lower = faster but may cancel before the effect registers |
 | **Suppression** | `OnCancel` | When to suppress the cancel key's other in-game functions. `OnCancel` = only when cancelling; `Always` = every time it's pressed |
-| **Club Special Attack** | `true` | When enabled, pressing the cancel key with a club triggers the special smash attack and spams attacks during its animation instead of cancelling |
+| **Club Special Attack** | `true` | When enabled, pressing the cancel key with a club triggers the special smash attack and spams attacks during its animation instead of cancelling. Currently bugged. |
 
 ## Changes from original
 
